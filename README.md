@@ -21,7 +21,7 @@ This project is focused on analyzing web traffic logs using a Retrieval-Augmente
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/rag-web-traffic-log-analysis.git
+   git clone https://github.com/emrefintech/web_traffic_rag.git
    cd rag-web-traffic-log-analysis
    ```
 
