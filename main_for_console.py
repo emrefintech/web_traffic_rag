@@ -68,6 +68,7 @@ def evaluate_performance():
 
         if str(expected_answer) in generated_answer:
             print("Modelin cevabi dogru!")
+            
             correct_count += 1
         else:
             print("Modelin cevabi yanlis.")

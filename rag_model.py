@@ -26,7 +26,8 @@ class RAGModel(LogProcessor):
             )
 
         context = " ".join(context_list)
-
+        
+        
         #Girdiğim texti tokenize ediyorum
         input_text = f"answer question: {query} context: {context}"
         input_ids = self.tokenizer.encode(input_text, return_tensors='pt')
@@ -36,6 +37,7 @@ class RAGModel(LogProcessor):
 
         #Decode ediyorum ki insan için anlamlı bir cümle haline dönüşsün
         answer = self.tokenizer.decode(output_ids[0], skip_special_tokens=True)
+        
 
         return answer
 
