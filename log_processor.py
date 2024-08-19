@@ -41,7 +41,7 @@ class LogProcessor:
         #Vektörlere dönüştürdüm.
         self.log_vectors = model.encode(log_texts.tolist())
 
-        print(f"Vektörlerin boyutu: {self.log_vectors.shape}")
+        print(f"Vektorlerin boyutu: {self.log_vectors.shape}")
 
     def build_faiss_index(self):
         #Boyut bilgisini dinamik olarak alıyorum
@@ -54,9 +54,9 @@ class LogProcessor:
         self.index.add(np.array(self.log_vectors))
 
         if self.index.ntotal > 0:
-            print(f"FAISS indeksi başarıyla {self.index.ntotal} vektörle oluşturuldu.")
+            print(f"FAISS indeksi basariyla {self.index.ntotal} vektorle olusturuldu.")
         else:
-            print("Hata: FAISS indeksi düzgün oluşturulmadı.")
+            print("Hata: FAISS indeksi duzgun olusturulmadi.")
 
     def search_similar_logs(self, query_vector, k=5):
         #FAISS ile en yakın k komşuyu arıyorum çok fazla arttırmıyorum overfitting olmasın diye

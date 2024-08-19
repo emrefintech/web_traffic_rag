@@ -63,14 +63,14 @@ def evaluate_performance():
         total_time += (end_time - start_time)
 
         print(f"Soru: {question}")
-        print(f"Modelin Verdiği Cevap: {generated_answer}")
+        print(f"Modelin Verdigi Cevap: {generated_answer}")
         print(f"Beklenen Cevap: {expected_answer}")
 
         if str(expected_answer) in generated_answer:
-            print("Modelin cevabı doğru!")
+            print("Modelin cevabi dogru!")
             correct_count += 1
         else:
-            print("Modelin cevabı yanlış.")
+            print("Modelin cevabi yanlis.")
 
         print()
 
@@ -79,8 +79,8 @@ def evaluate_performance():
     accuracy = (correct_count / total_questions) * 100
     avg_response_time = total_time / total_questions
 
-    print(f"Doğruluk: {accuracy}%")
-    print(f"Ortalama Yanıt Süresi: {avg_response_time:.2f} saniye")
+    print(f"Dogruluk: {accuracy}%")
+    print(f"Ortalama Yanit Suresi: {avg_response_time:.2f} saniye")
 
 if __name__ == "__main__":
     evaluate_performance()
